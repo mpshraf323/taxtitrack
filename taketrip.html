@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taxi Track - Book Trip</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 pb-24">
+
+  <!-- PAGE HEADER -->
+  <div class="p-5 bg-yellow-500 text-white rounded-b-3xl shadow">
+    <h1 class="text-xl font-semibold">Book a Trip</h1>
+    <p class="text-sm opacity-90">Fill the details to schedule a new trip</p>
+  </div>
+
+  <!-- FORM SECTION -->
+  <div class="p-5 space-y-4">
+
+      <!-- CUSTOMER DETAILS -->
+    <div>
+      <div class="flex justify-between items-center">
+        <label class="font-semibold text-gray-700 text-sm">Customer</label>
+        <button class="px-3 py-1 bg-yellow-500 text-white rounded-lg text-sm shadow mb-2">
+          + Add New
+        </button>
+      </div>
+
+      <select class="w-full mt-1 p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-yellow-500 outline-none">
+        <option>Select customer</option>
+        <option>Customer 1</option>
+        <option>Customer 2</option>
+      </select>
+    </div>
+
+    <!-- PICKUP LOCATION -->
+    <div>
+      <label class="font-semibold text-gray-700 text-sm">Pickup Location</label>
+      <input type="text" placeholder="Enter pickup location"
+             class="w-full mt-1 p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-yellow-500 outline-none" />
+    </div>
+
+    <!-- DROP LOCATION -->
+    <div>
+      <label class="font-semibold text-gray-700 text-sm">Drop Location</label>
+      <input type="text" placeholder="Enter drop location"
+             class="w-full mt-1 p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-yellow-500 outline-none" />
+    </div>
+
+    <!-- PICKUP DATE & TIME -->
+    <div>
+      <label class="font-semibold text-gray-700 text-sm">Pickup Date & Time</label>
+      <input type="datetime-local"
+             class="w-full mt-1 p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-yellow-500 outline-none" />
+    </div>
+
+
+    <!-- TOTAL KM -->
+    <div>
+      <label class="font-semibold text-gray-700 text-sm">Total KM</label>
+      <input type="number" placeholder="Enter KM"
+             class="w-full mt-1 p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-yellow-500 outline-none" />
+    </div>
+
+    <!-- AMOUNT -->
+    <div>
+      <label class="font-semibold text-gray-700 text-sm">Trip Amount</label>
+      <input type="number" placeholder="Enter amount"
+             class="w-full mt-1 p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-yellow-500 outline-none" />
+    </div>
+    
+    <!-- NOTES -->
+    <div>
+      <label class="font-semibold text-gray-700 text-sm">Notes</label>
+      <input type="text" placeholder="Write notes here"
+             class="w-full mt-1 p-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-yellow-500 outline-none" />
+    </div>
+
+    <!-- RECURSIVE OPTION -->
+    <div class="flex items-center space-x-2">
+      <input type="checkbox" id="recursive" class="w-4 h-4 text-yellow-500" />
+      <label for="recursive" class="text-gray-700 text-sm">Is this trip recursive?</label>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <button class="w-full mt-4 bg-yellow-500 text-white p-4 rounded-2xl text-lg font-semibold shadow-md">
+      Schedule Now
+    </button>
+
+  </div>
+
+  <!-- BOTTOM NAVIGATION (same as previous screen) -->
+ <!-- BOTTOM NAVIGATION -->
+<div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg rounded-t-3xl p-3 flex justify-around">
+
+  <div class="flex flex-col items-center text-gray-500">
+    <span class="material-symbols-rounded text-2xl">home</span>
+    <p class="text-xs">Home</p>
+  </div>
+
+  <div class="flex flex-col items-center text-blue-500">
+    <span class="material-symbols-rounded text-2xl">calendar_month</span>
+    <p class="text-xs">Trips</p>
+  </div>
+
+  <div class="flex flex-col items-center text-gray-500">
+    <span class="material-symbols-rounded text-2xl">account_balance_wallet</span>
+    <p class="text-xs">Payments</p>
+  </div>
+
+  <div class="flex flex-col items-center text-gray-500">
+    <span class="material-symbols-rounded text-2xl">person</span>
+    <p class="text-xs">Profile</p>
+  </div>
+
+</div>
+
+
+</body>
+</html>
