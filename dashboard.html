@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taxi Track - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 pb-24">
+
+
+<!-- TOP HEADER WITH BACKGROUND IMAGE -->
+<div class="rounded-b-3xl p-6 text-white"
+     style="
+        background-image: url('https://img.freepik.com/free-vector/abstract-simple-yellow-circle-shape-background-design-vector_1017-47338.jpg?semt=ais_hybrid&w=740&q=80');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+     "
+>
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-2xl font-bold">Hey Ashraf,</h1>
+      <p class="text-sm opacity-90">What will you do today?</p>
+    </div>
+
+    <!-- Profile picture -->
+    <div class="w-12 h-12 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center overflow-hidden">
+      <img src="https://via.placeholder.com/50" class="rounded-full" />
+    </div>
+  </div>
+
+  <!-- WHITE CARD SUMMARY -->
+<!-- GOOGLE MATERIAL ICONS -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+<!-- Updated Card -->
+<div class="bg-white text-gray-800 mt-6 rounded-2xl p-5 shadow-xl space-y-2">
+
+  <!-- Section Title -->
+  <div class="flex justify-between items-center">
+    <p class="font-semibold text-gray-600">Total Collection</p>
+     <h3 class="text-xl font-bold text-gray-800">₹ 1250</h3>
+  </div>
+
+<!-- Today Trips -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-yellow-50 shadow-sm">
+  <div class="flex items-center">
+    <span class="material-icons-round text-yellow-600 text-3xl mr-4">local_taxi</span>
+    <p class="text-sm text-gray-600 font-medium">Today Trips</p>
+  </div>
+  <h3 class="text-xl font-bold text-gray-800">4</h3>
+</div>
+
+<!-- Completed Trips -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-yellow-50 shadow-sm">
+  <div class="flex items-center">
+    <span class="material-icons-round text-green-600 text-3xl mr-4">check_circle</span>
+    <p class="text-sm text-gray-600 font-medium">Completed</p>
+  </div>
+  <h3 class="text-xl font-bold text-gray-800">256</h3>
+</div>
+
+<!-- Today Income -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-yellow-50 shadow-sm">
+  <div class="flex items-center">
+    <span class="material-icons-round text-blue-600 text-3xl mr-4">currency_rupee</span>
+    <p class="text-sm text-gray-600 font-medium">Today Income</p>
+  </div>
+  <h3 class="text-xl font-bold text-gray-800">₹ 1250</h3>
+</div>
+
+</div>
+
+</div>
+  <!-- ICON GRID MENU -->
+  <div class="grid grid-cols-2 gap-2 px-6 mt-6 text-center">
+<div>
+  <a href="taketrip.html">
+    <div class="border-2 border-yellow-500 rounded-xl shadow flex items-center justify-center text-yellow-600 hover:bg-yellow-500 hover:text-white transition-all duration-200">
+      <p class="text-lg font-semibold flex items-center gap-2 px-8 py-3">
+        <span class="material-icons-round text-xl">local_taxi</span>
+        Take a Trip
+      </p>
+    </div>
+  </a>
+</div>
+<div>
+  <a href="taketrip.html">
+    <div class="border-2 border-yellow-500 rounded-xl shadow flex items-center justify-center text-yellow-600 hover:bg-yellow-500 hover:text-white transition-all duration-200">
+      <p class="text-lg font-semibold flex items-center gap-2 px-8 py-3">
+        <span class="material-icons-round text-xl">local_taxi</span>
+        Add Payment
+      </p>
+    </div>
+  </a>
+</div>
+  </div>
+
+  <!-- TITLE -->
+  <h2 class="px-6 mt-6 font-semibold text-gray-700">Recent Trips</h2>
+
+  <!-- LIST OF COMPLETED TRIPS (5 ROWS) -->
+<div class="px-6 mt-3 space-y-3">
+
+  <!-- Row 1 -->
+  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+    <div class="flex flex-col">
+      <p class="font-semibold text-gray-800 text-md">Mubhboola Block 3 - Kuwait City</p>
+      <p class="text-xs text-gray-400">05 Dec 2025</p>
+    </div>
+
+    <div class="text-right">
+      <p class="text-green-500 font-semibold text-sm">₹ 129</p>
+      <p class="text-xs text-green-600">Cash Received</p>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+    <div class="flex flex-col">
+      <p class="font-semibold text-gray-800">Farwania - Kuwait City</p>
+      <p class="text-xs text-gray-500">05 Dec 2025</p>
+    </div>
+
+    <div class="text-right">
+      <p class="text-green-500 font-semibold text-sm">₹ 110</p>
+      <p class="text-xs text-orange-500">Pending</p>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+    <div class="flex flex-col">
+      <p class="font-semibold text-gray-800">Alhahmed - Jahra</p>
+      <p class="text-xs text-gray-500">05 Dec 2025</p>
+    </div>
+
+    <div class="text-right">
+      <p class="text-green-500 font-semibold text-sm">₹ 95</p>
+      <p class="text-xs text-green-600">Cash Received</p>
+    </div>
+  </div>
+
+  <!-- Row 4 -->
+  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+    <div class="flex flex-col">
+      <p class="font-semibold text-gray-800">Mangaf - Abu Halifa</p>
+      <p class="text-xs text-gray-500">05 Dec 2025</p>
+    </div>
+
+    <div class="text-right">
+      <p class="text-green-500 font-semibold text-sm">₹ 150</p>
+      <p class="text-xs text-orange-500">Pending</p>
+    </div>
+  </div>
+
+  <!-- Row 5 -->
+  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+    <div class="flex flex-col">
+      <p class="font-semibold text-gray-800">Trip #A1005</p>
+      <p class="text-xs text-gray-500">05 Dec 2025</p>
+    </div>
+
+    <div class="text-right">
+      <p class="text-green-500 font-semibold text-sm">₹ 180</p>
+      <p class="text-xs text-orange-500">Pending</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- BOTTOM NAVIGATION -->
+<div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg rounded-t-3xl p-3 flex justify-around">
+
+  <div class="flex flex-col items-center text-gray-500">
+    <span class="material-symbols-rounded text-2xl">home</span>
+    <p class="text-xs">Home</p>
+  </div>
+
+  <div class="flex flex-col items-center text-blue-500">
+    <span class="material-symbols-rounded text-2xl">calendar_month</span>
+    <p class="text-xs">Trips</p>
+  </div>
+
+  <div class="flex flex-col items-center text-gray-500">
+    <span class="material-symbols-rounded text-2xl">account_balance_wallet</span>
+    <p class="text-xs">Payments</p>
+  </div>
+
+  <div class="flex flex-col items-center text-gray-500">
+    <span class="material-symbols-rounded text-2xl">person</span>
+    <p class="text-xs">Profile</p>
+  </div>
+
+</div>
+
+
+</body>
+</html>
