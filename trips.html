@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taxi Track - Trips</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            roboto: ['Roboto', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 pb-24 font-roboto">
+
+  <!-- HEADER with background image -->
+  <div class="p-6 bg-[url('https://img.freepik.com/free-vector/yellow-with-circles-shapes-background_1095-94.jpg?semt=ais_hybrid&w=740&q=80')] bg-cover bg-center text-white rounded-b-3xl shadow">
+    <h1 class="text-xl font-semibold">Your Trips</h1>
+    <p class="text-sm opacity-90">View all your completed, upcoming & pending trips</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="mt-4 flex justify-around text-sm font-medium border-b bg-white">
+    <button id="tabCompleted" class="py-3 px-4 bg-orange-500 text-white font-semibold rounded-t-xl" onclick="switchTab('completed')">Completed</button>
+    <button id="tabUpcoming" class="py-3 px-4 text-gray-500" onclick="switchTab('upcoming')">Upcoming</button>
+    <button id="tabPending" class="py-3 px-4 text-gray-500" onclick="switchTab('pending')">Pending</button>
+  </div>
+
+  <!-- TAB CONTENT -->
+  <div class="px-5 mt-4 space-y-4">
+
+    <!-- COMPLETED TRIPS -->
+    <div id="contentCompleted">
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between my-1">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-rounded text-gray-400 text-xl">calendar_month</span>
+          <div>
+            <p class="font-semibold text-gray-800">Block 3 - Kuwait City</p>
+            <div class="flex items-center gap-1 text-xs text-gray-400">
+              <span class="material-symbols-rounded text-sm">schedule</span>
+              <p>03 Dec 2025 • 09:30 AM</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-green-600 font-semibold text-sm">₹ 120 • Paid</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between my-1">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-rounded text-gray-400 text-xl">calendar_month</span>
+          <div>
+            <p class="font-semibold text-gray-800">Fahaheel - Abu Halifa</p>
+            <div class="flex items-center gap-1 text-xs text-gray-400">
+              <span class="material-symbols-rounded text-sm">schedule</span>
+              <p>02 Dec 2025 • 04:15 PM</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-green-600 font-semibold text-sm">₹ 140 • Paid</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between my-1">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-rounded text-gray-400 text-xl">calendar_month</span>
+          <div>
+            <p class="font-semibold text-gray-800">Jahra - Salmiya</p>
+            <div class="flex items-center gap-1 text-xs text-gray-400">
+              <span class="material-symbols-rounded text-sm">schedule</span>
+              <p>01 Dec 2025 • 06:20 PM</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-green-600 font-semibold text-sm">₹ 160 • Paid</p>
+      </div>
+    </div>
+
+    <!-- UPCOMING TRIPS -->
+    <div id="contentUpcoming" class="hidden">
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between my-1">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-rounded text-blue-400 text-xl">event_available</span>
+          <div>
+            <p class="font-semibold text-gray-800">Mangaf - Fahaheel</p>
+            <div class="flex items-center gap-1 text-xs text-gray-400">
+              <span class="material-symbols-rounded text-sm">schedule</span>
+              <p>Tomorrow • 09:00 AM</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-blue-600 font-semibold text-sm">Scheduled</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-rounded text-blue-400 text-xl">event_available</span>
+          <div>
+            <p class="font-semibold text-gray-800">Kuwait City - Salmiya</p>
+            <div class="flex items-center gap-1 text-xs text-gray-400">
+              <span class="material-symbols-rounded text-sm">schedule</span>
+              <p>06 Dec 2025 • 05:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-blue-600 font-semibold text-sm">Scheduled</p>
+      </div>
+    </div>
+
+    <!-- PENDING TRIPS -->
+    <div id="contentPending" class="hidden">
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between my-1">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-rounded text-orange-400 text-xl">pending_actions</span>
+          <div>
+            <p class="font-semibold text-gray-800">Farwaniya - Kuwait City</p>
+            <div class="flex items-center gap-1 text-xs text-gray-400">
+              <span class="material-symbols-rounded text-sm">schedule</span>
+              <p>05 Dec 2025 • 11:45 AM</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-orange-500 font-semibold text-sm">₹ 110 • Pending</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-rounded text-orange-400 text-xl">pending_actions</span>
+          <div>
+            <p class="font-semibold text-gray-800">Mangaf - Abu Halifa</p>
+            <div class="flex items-center gap-1 text-xs text-gray-400">
+              <span class="material-symbols-rounded text-sm">schedule</span>
+              <p>04 Dec 2025 • 03:10 PM</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-orange-500 font-semibold text-sm">₹ 150 • Pending</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg rounded-t-3xl p-3 flex justify-around">
+    <a href="dashboard.html" class="flex flex-col items-center text-blue-500">
+      <span class="material-symbols-rounded text-2xl">home</span>
+      <p class="text-xs">Home</p>
+    </a>
+
+    <a href="trips.html" class="flex flex-col items-center text-blue-500">
+      <span class="material-symbols-rounded text-2xl">calendar_month</span>
+      <p class="text-xs">Trips</p>
+    </a>
+
+    <div class="flex flex-col items-center text-gray-500">
+      <span class="material-symbols-rounded text-2xl">account_balance_wallet</span>
+      <p class="text-xs">Payments</p>
+    </div>
+
+    <div class="flex flex-col items-center text-gray-500">
+      <span class="material-symbols-rounded text-2xl">person</span>
+      <p class="text-xs">Profile</p>
+    </div>
+  </div>
+
+  <!-- TAB SWITCH SCRIPT -->
+  <script>
+    function switchTab(tab) {
+      document.getElementById("contentCompleted").classList.add("hidden");
+      document.getElementById("contentUpcoming").classList.add("hidden");
+      document.getElementById("contentPending").classList.add("hidden");
+
+      document.getElementById("content" + capitalize(tab)).classList.remove("hidden");
+
+      // Reset all tabs to inactive
+      document.getElementById("tabCompleted").className = "py-3 px-4 text-gray-500";
+      document.getElementById("tabUpcoming").className = "py-3 px-4 text-gray-500";
+      document.getElementById("tabPending").className = "py-3 px-4 text-gray-500";
+
+      // Set active tab classes
+      document.getElementById("tab" + capitalize(tab)).className = "py-3 px-4 bg-orange-500 text-white font-semibold rounded-t-xl";
+    }
+
+    function capitalize(word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+  </script>
+
+</body>
+
+</html>

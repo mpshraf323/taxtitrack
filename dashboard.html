@@ -53,8 +53,12 @@
 
   <!-- Section Title -->
   <div class="flex justify-between items-center">
-    <p class="font-semibold text-gray-600">Total Collection</p>
-     <h3 class="text-xl font-bold text-gray-800">₹ 1250</h3>
+    <div class="flex items-center">
+         <span class="material-symbols-rounded text-2xl pr-2 text-blue-600">account_balance_wallet</span>
+    <p class="font-semibold text-blue-600">My Wallet</p>
+    </div>
+  
+     <div class="text-xl font-bold text-blue-600">450 <span class="text-gray-400 text-[12px]">KWD</span></div>
   </div>
 
 <!-- Today Trips -->
@@ -63,7 +67,7 @@
     <span class="material-icons-round text-yellow-600 text-3xl mr-4">local_taxi</span>
     <p class="text-sm text-gray-600 font-medium">Today Trips</p>
   </div>
-  <h3 class="text-xl font-bold text-gray-800">4</h3>
+  <h3 class="text-xl font-bold text-orange-600">17</h3>
 </div>
 
 <!-- Completed Trips -->
@@ -72,16 +76,25 @@
     <span class="material-icons-round text-green-600 text-3xl mr-4">check_circle</span>
     <p class="text-sm text-gray-600 font-medium">Completed</p>
   </div>
-  <h3 class="text-xl font-bold text-gray-800">256</h3>
+  <h3 class="text-xl font-bold text-green-800">39</h3>
 </div>
 
 <!-- Today Income -->
-<div class="flex items-center justify-between p-4 rounded-xl bg-yellow-50 shadow-sm">
+<div class="flex items-center justify-between p-4 rounded-xl shadow-sm 
+     bg-cover bg-center bg-no-repeat"
+     style="background-image: url('https://img.freepik.com/premium-vector/white-abstract-background-vector_10307-568.jpg?semt=ais_hybrid&w=740&q=80');">
+
   <div class="flex items-center">
-    <span class="material-icons-round text-blue-600 text-3xl mr-4">currency_rupee</span>
+    <span class="material-icons-round text-blue-600 text-3xl mr-4">
+      account_balance_wallet
+    </span>
     <p class="text-sm text-gray-600 font-medium">Today Collections</p>
   </div>
-  <h3 class="text-xl font-bold text-gray-800">₹ 1250</h3>
+
+  <h3 class="text-xl font-bold text-gray-900">
+    468 <span class="text-gray-400 text-[12px]">KWD</span>
+  </h3>
+
 </div>
 
 </div>
@@ -188,15 +201,15 @@
 <!-- BOTTOM NAVIGATION -->
 <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg rounded-t-3xl p-3 flex justify-around">
 
-  <div class="flex flex-col items-center text-gray-500">
+ <a href="dashboard.html" class="flex flex-col items-center text-blue-500">
     <span class="material-symbols-rounded text-2xl">home</span>
     <p class="text-xs">Home</p>
-  </div>
+ </a>
 
-  <div class="flex flex-col items-center text-blue-500">
-    <span class="material-symbols-rounded text-2xl">calendar_month</span>
-    <p class="text-xs">Trips</p>
-  </div>
+<a href="trips.html" class="flex flex-col items-center text-blue-500">
+  <span class="material-symbols-rounded text-2xl">calendar_month</span>
+  <p class="text-xs">Trips</p>
+</a>
 
   <div class="flex flex-col items-center text-gray-500">
     <span class="material-symbols-rounded text-2xl">account_balance_wallet</span>
